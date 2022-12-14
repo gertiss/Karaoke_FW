@@ -1,0 +1,632 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		500A5BDC29394D2900D7FDC7 /* TimeAfterTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500A5BDB29394D2900D7FDC7 /* TimeAfterTime.swift */; };
+		503AB4822944E0B400D86975 /* NSAttributedString ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503AB4812944E0B400D86975 /* NSAttributedString ext.swift */; };
+		50444208293B37FE000607BA /* Curseur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50444207293B37FE000607BA /* Curseur.swift */; };
+		5044420C293B7FBB000607BA /* Encadrement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5044420B293B7FBB000607BA /* Encadrement.swift */; };
+		50538F882938BD0A002C66AC /* Karaoke_FW.docc in Sources */ = {isa = PBXBuildFile; fileRef = 50538F872938BD0A002C66AC /* Karaoke_FW.docc */; };
+		50538F8E2938BD0B002C66AC /* Karaoke_FW.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50538F832938BD0A002C66AC /* Karaoke_FW.framework */; };
+		50538F932938BD0B002C66AC /* Karaoke_FWTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50538F922938BD0B002C66AC /* Karaoke_FWTests.swift */; };
+		50538F942938BD0B002C66AC /* Karaoke_FW.h in Headers */ = {isa = PBXBuildFile; fileRef = 50538F862938BD0A002C66AC /* Karaoke_FW.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50538FA72938BD72002C66AC /* Partie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50538F9D2938BD70002C66AC /* Partie.swift */; };
+		50538FA82938BD72002C66AC /* Ligne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50538F9E2938BD70002C66AC /* Ligne.swift */; };
+		50538FA92938BD72002C66AC /* Mesure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50538F9F2938BD71002C66AC /* Mesure.swift */; };
+		50538FAA2938BD72002C66AC /* PleinVide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50538FA02938BD71002C66AC /* PleinVide.swift */; };
+		50538FAB2938BD72002C66AC /* PleinPlein.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50538FA12938BD71002C66AC /* PleinPlein.swift */; };
+		50538FAD2938BD72002C66AC /* VidePlein.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50538FA32938BD71002C66AC /* VidePlein.swift */; };
+		50538FAE2938BD72002C66AC /* VideVide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50538FA42938BD71002C66AC /* VideVide.swift */; };
+		50538FAF2938BD72002C66AC /* Chanson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50538FA52938BD72002C66AC /* Chanson.swift */; };
+		50538FB02938BD72002C66AC /* Temps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50538FA62938BD72002C66AC /* Temps.swift */; };
+		50538FB42938BE53002C66AC /* RX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50538FB32938BE53002C66AC /* RX.swift */; };
+		50538FB72938C09F002C66AC /* Lecteur.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50538FB62938C09F002C66AC /* Lecteur.framework */; };
+		50538FB82938C09F002C66AC /* Lecteur.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 50538FB62938C09F002C66AC /* Lecteur.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		507FAABF2943695B008156C7 /* Croche.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507FAABE2943695B008156C7 /* Croche.swift */; };
+		507FAAC429436B44008156C7 /* Publiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507FAAC329436B44008156C7 /* Publiable.swift */; };
+		507FAAC629436BCA008156C7 /* Chanson publiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507FAAC529436BC9008156C7 /* Chanson publiable.swift */; };
+		507FAAC829436BFC008156C7 /* Partie publiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507FAAC729436BFC008156C7 /* Partie publiable.swift */; };
+		507FAACA29436C2C008156C7 /* Ligne publiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507FAAC929436C2C008156C7 /* Ligne publiable.swift */; };
+		507FAACC29436C78008156C7 /* Mesure publiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507FAACB29436C78008156C7 /* Mesure publiable.swift */; };
+		507FAACE29436CB0008156C7 /* Temps publiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507FAACD29436CB0008156C7 /* Temps publiable.swift */; };
+		507FAAD029436CDF008156C7 /* PleinPlein publiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507FAACF29436CDF008156C7 /* PleinPlein publiable.swift */; };
+		507FAAD229436D3B008156C7 /* PleinVide publiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507FAAD129436D3B008156C7 /* PleinVide publiable.swift */; };
+		507FAAD429436D4F008156C7 /* VidePlein publiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507FAAD329436D4F008156C7 /* VidePlein publiable.swift */; };
+		507FAAD629436D60008156C7 /* VideVide publiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507FAAD529436D60008156C7 /* VideVide publiable.swift */; };
+		507FAAD829436E2F008156C7 /* DemiSoupir.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507FAAD729436E2F008156C7 /* DemiSoupir.swift */; };
+		50E7D3782948EE0300F6C8DB /* Texte.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E7D3772948EE0300F6C8DB /* Texte.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		50538F8F2938BD0B002C66AC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 50538F7A2938BD0A002C66AC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 50538F822938BD0A002C66AC;
+			remoteInfo = Karaoke_FW;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		50538FB92938C09F002C66AC /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				50538FB82938C09F002C66AC /* Lecteur.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		500A5BDB29394D2900D7FDC7 /* TimeAfterTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeAfterTime.swift; sourceTree = "<group>"; };
+		503AB4812944E0B400D86975 /* NSAttributedString ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString ext.swift"; sourceTree = "<group>"; };
+		50444207293B37FE000607BA /* Curseur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Curseur.swift; sourceTree = "<group>"; };
+		5044420B293B7FBB000607BA /* Encadrement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encadrement.swift; sourceTree = "<group>"; };
+		50538F832938BD0A002C66AC /* Karaoke_FW.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Karaoke_FW.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		50538F862938BD0A002C66AC /* Karaoke_FW.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Karaoke_FW.h; sourceTree = "<group>"; };
+		50538F872938BD0A002C66AC /* Karaoke_FW.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Karaoke_FW.docc; sourceTree = "<group>"; };
+		50538F8D2938BD0B002C66AC /* Karaoke_FWTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Karaoke_FWTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		50538F922938BD0B002C66AC /* Karaoke_FWTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Karaoke_FWTests.swift; sourceTree = "<group>"; };
+		50538F9D2938BD70002C66AC /* Partie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Partie.swift; sourceTree = "<group>"; };
+		50538F9E2938BD70002C66AC /* Ligne.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ligne.swift; sourceTree = "<group>"; };
+		50538F9F2938BD71002C66AC /* Mesure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mesure.swift; sourceTree = "<group>"; };
+		50538FA02938BD71002C66AC /* PleinVide.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PleinVide.swift; sourceTree = "<group>"; };
+		50538FA12938BD71002C66AC /* PleinPlein.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PleinPlein.swift; sourceTree = "<group>"; };
+		50538FA32938BD71002C66AC /* VidePlein.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VidePlein.swift; sourceTree = "<group>"; };
+		50538FA42938BD71002C66AC /* VideVide.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideVide.swift; sourceTree = "<group>"; };
+		50538FA52938BD72002C66AC /* Chanson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chanson.swift; sourceTree = "<group>"; };
+		50538FA62938BD72002C66AC /* Temps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Temps.swift; sourceTree = "<group>"; };
+		50538FB32938BE53002C66AC /* RX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RX.swift; sourceTree = "<group>"; };
+		50538FB62938C09F002C66AC /* Lecteur.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Lecteur.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		507FAABE2943695B008156C7 /* Croche.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Croche.swift; sourceTree = "<group>"; };
+		507FAAC329436B44008156C7 /* Publiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Publiable.swift; sourceTree = "<group>"; };
+		507FAAC529436BC9008156C7 /* Chanson publiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Chanson publiable.swift"; sourceTree = "<group>"; };
+		507FAAC729436BFC008156C7 /* Partie publiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Partie publiable.swift"; sourceTree = "<group>"; };
+		507FAAC929436C2C008156C7 /* Ligne publiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ligne publiable.swift"; sourceTree = "<group>"; };
+		507FAACB29436C78008156C7 /* Mesure publiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Mesure publiable.swift"; sourceTree = "<group>"; };
+		507FAACD29436CB0008156C7 /* Temps publiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Temps publiable.swift"; sourceTree = "<group>"; };
+		507FAACF29436CDF008156C7 /* PleinPlein publiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PleinPlein publiable.swift"; sourceTree = "<group>"; };
+		507FAAD129436D3B008156C7 /* PleinVide publiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PleinVide publiable.swift"; sourceTree = "<group>"; };
+		507FAAD329436D4F008156C7 /* VidePlein publiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VidePlein publiable.swift"; sourceTree = "<group>"; };
+		507FAAD529436D60008156C7 /* VideVide publiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VideVide publiable.swift"; sourceTree = "<group>"; };
+		507FAAD729436E2F008156C7 /* DemiSoupir.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemiSoupir.swift; sourceTree = "<group>"; };
+		50E7D3772948EE0300F6C8DB /* Texte.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Texte.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		50538F802938BD0A002C66AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50538FB72938C09F002C66AC /* Lecteur.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50538F8A2938BD0B002C66AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50538F8E2938BD0B002C66AC /* Karaoke_FW.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		500A5BDA29394D0100D7FDC7 /* Exemples */ = {
+			isa = PBXGroup;
+			children = (
+				500A5BDB29394D2900D7FDC7 /* TimeAfterTime.swift */,
+			);
+			path = Exemples;
+			sourceTree = "<group>";
+		};
+		50538F792938BD0A002C66AC = {
+			isa = PBXGroup;
+			children = (
+				50538FB12938BDAE002C66AC /* Framework */,
+				50538F852938BD0A002C66AC /* Karaoke_FW */,
+				50538F912938BD0B002C66AC /* Karaoke_FWTests */,
+				50538F842938BD0A002C66AC /* Products */,
+				50538FB52938C09F002C66AC /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		50538F842938BD0A002C66AC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				50538F832938BD0A002C66AC /* Karaoke_FW.framework */,
+				50538F8D2938BD0B002C66AC /* Karaoke_FWTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		50538F852938BD0A002C66AC /* Karaoke_FW */ = {
+			isa = PBXGroup;
+			children = (
+				50538F862938BD0A002C66AC /* Karaoke_FW.h */,
+				50538F872938BD0A002C66AC /* Karaoke_FW.docc */,
+			);
+			path = Karaoke_FW;
+			sourceTree = "<group>";
+		};
+		50538F912938BD0B002C66AC /* Karaoke_FWTests */ = {
+			isa = PBXGroup;
+			children = (
+				50538F922938BD0B002C66AC /* Karaoke_FWTests.swift */,
+			);
+			path = Karaoke_FWTests;
+			sourceTree = "<group>";
+		};
+		50538FB12938BDAE002C66AC /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				500A5BDA29394D0100D7FDC7 /* Exemples */,
+				50538FB22938BE2C002C66AC /* Regex et Lecteurs */,
+				50444207293B37FE000607BA /* Curseur.swift */,
+				50BC2139294372AC002776EC /* Grammaire */,
+				507FAAC029436A65008156C7 /* Export String */,
+			);
+			path = Framework;
+			sourceTree = "<group>";
+		};
+		50538FB22938BE2C002C66AC /* Regex et Lecteurs */ = {
+			isa = PBXGroup;
+			children = (
+				50538FB32938BE53002C66AC /* RX.swift */,
+				5044420B293B7FBB000607BA /* Encadrement.swift */,
+				50E7D3772948EE0300F6C8DB /* Texte.swift */,
+			);
+			path = "Regex et Lecteurs";
+			sourceTree = "<group>";
+		};
+		50538FB52938C09F002C66AC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				50538FB62938C09F002C66AC /* Lecteur.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		507FAAC029436A65008156C7 /* Export String */ = {
+			isa = PBXGroup;
+			children = (
+				507FAAC329436B44008156C7 /* Publiable.swift */,
+				503AB4812944E0B400D86975 /* NSAttributedString ext.swift */,
+				507FAAC529436BC9008156C7 /* Chanson publiable.swift */,
+				507FAAC729436BFC008156C7 /* Partie publiable.swift */,
+				507FAAC929436C2C008156C7 /* Ligne publiable.swift */,
+				507FAACB29436C78008156C7 /* Mesure publiable.swift */,
+				507FAACD29436CB0008156C7 /* Temps publiable.swift */,
+				507FAACF29436CDF008156C7 /* PleinPlein publiable.swift */,
+				507FAAD129436D3B008156C7 /* PleinVide publiable.swift */,
+				507FAAD329436D4F008156C7 /* VidePlein publiable.swift */,
+				507FAAD529436D60008156C7 /* VideVide publiable.swift */,
+				507FAAD729436E2F008156C7 /* DemiSoupir.swift */,
+				507FAABE2943695B008156C7 /* Croche.swift */,
+			);
+			path = "Export String";
+			sourceTree = "<group>";
+		};
+		50BC2139294372AC002776EC /* Grammaire */ = {
+			isa = PBXGroup;
+			children = (
+				50538FA52938BD72002C66AC /* Chanson.swift */,
+				50538F9D2938BD70002C66AC /* Partie.swift */,
+				50538F9E2938BD70002C66AC /* Ligne.swift */,
+				50538F9F2938BD71002C66AC /* Mesure.swift */,
+				50538FA62938BD72002C66AC /* Temps.swift */,
+				50538FA12938BD71002C66AC /* PleinPlein.swift */,
+				50538FA02938BD71002C66AC /* PleinVide.swift */,
+				50538FA32938BD71002C66AC /* VidePlein.swift */,
+				50538FA42938BD71002C66AC /* VideVide.swift */,
+			);
+			path = Grammaire;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		50538F7E2938BD0A002C66AC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50538F942938BD0B002C66AC /* Karaoke_FW.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		50538F822938BD0A002C66AC /* Karaoke_FW */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 50538F972938BD0B002C66AC /* Build configuration list for PBXNativeTarget "Karaoke_FW" */;
+			buildPhases = (
+				50538F7E2938BD0A002C66AC /* Headers */,
+				50538F7F2938BD0A002C66AC /* Sources */,
+				50538F802938BD0A002C66AC /* Frameworks */,
+				50538F812938BD0A002C66AC /* Resources */,
+				50538FB92938C09F002C66AC /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Karaoke_FW;
+			productName = Karaoke_FW;
+			productReference = 50538F832938BD0A002C66AC /* Karaoke_FW.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		50538F8C2938BD0B002C66AC /* Karaoke_FWTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 50538F9A2938BD0B002C66AC /* Build configuration list for PBXNativeTarget "Karaoke_FWTests" */;
+			buildPhases = (
+				50538F892938BD0B002C66AC /* Sources */,
+				50538F8A2938BD0B002C66AC /* Frameworks */,
+				50538F8B2938BD0B002C66AC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				50538F902938BD0B002C66AC /* PBXTargetDependency */,
+			);
+			name = Karaoke_FWTests;
+			productName = Karaoke_FWTests;
+			productReference = 50538F8D2938BD0B002C66AC /* Karaoke_FWTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		50538F7A2938BD0A002C66AC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1410;
+				LastUpgradeCheck = 1410;
+				TargetAttributes = {
+					50538F822938BD0A002C66AC = {
+						CreatedOnToolsVersion = 14.1;
+					};
+					50538F8C2938BD0B002C66AC = {
+						CreatedOnToolsVersion = 14.1;
+					};
+				};
+			};
+			buildConfigurationList = 50538F7D2938BD0A002C66AC /* Build configuration list for PBXProject "Karaoke_FW" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 50538F792938BD0A002C66AC;
+			productRefGroup = 50538F842938BD0A002C66AC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				50538F822938BD0A002C66AC /* Karaoke_FW */,
+				50538F8C2938BD0B002C66AC /* Karaoke_FWTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		50538F812938BD0A002C66AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50538F8B2938BD0B002C66AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		50538F7F2938BD0A002C66AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50538FAA2938BD72002C66AC /* PleinVide.swift in Sources */,
+				50538FA92938BD72002C66AC /* Mesure.swift in Sources */,
+				500A5BDC29394D2900D7FDC7 /* TimeAfterTime.swift in Sources */,
+				507FAAD829436E2F008156C7 /* DemiSoupir.swift in Sources */,
+				507FAACA29436C2C008156C7 /* Ligne publiable.swift in Sources */,
+				507FAABF2943695B008156C7 /* Croche.swift in Sources */,
+				50538FAF2938BD72002C66AC /* Chanson.swift in Sources */,
+				50538FAD2938BD72002C66AC /* VidePlein.swift in Sources */,
+				50E7D3782948EE0300F6C8DB /* Texte.swift in Sources */,
+				507FAAC829436BFC008156C7 /* Partie publiable.swift in Sources */,
+				50538FAE2938BD72002C66AC /* VideVide.swift in Sources */,
+				50538FB42938BE53002C66AC /* RX.swift in Sources */,
+				507FAACC29436C78008156C7 /* Mesure publiable.swift in Sources */,
+				507FAAC429436B44008156C7 /* Publiable.swift in Sources */,
+				50444208293B37FE000607BA /* Curseur.swift in Sources */,
+				50538FA72938BD72002C66AC /* Partie.swift in Sources */,
+				503AB4822944E0B400D86975 /* NSAttributedString ext.swift in Sources */,
+				50538FAB2938BD72002C66AC /* PleinPlein.swift in Sources */,
+				507FAAD029436CDF008156C7 /* PleinPlein publiable.swift in Sources */,
+				507FAACE29436CB0008156C7 /* Temps publiable.swift in Sources */,
+				50538FB02938BD72002C66AC /* Temps.swift in Sources */,
+				507FAAD229436D3B008156C7 /* PleinVide publiable.swift in Sources */,
+				50538F882938BD0A002C66AC /* Karaoke_FW.docc in Sources */,
+				5044420C293B7FBB000607BA /* Encadrement.swift in Sources */,
+				50538FA82938BD72002C66AC /* Ligne.swift in Sources */,
+				507FAAD629436D60008156C7 /* VideVide publiable.swift in Sources */,
+				507FAAD429436D4F008156C7 /* VidePlein publiable.swift in Sources */,
+				507FAAC629436BCA008156C7 /* Chanson publiable.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50538F892938BD0B002C66AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50538F932938BD0B002C66AC /* Karaoke_FWTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		50538F902938BD0B002C66AC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 50538F822938BD0A002C66AC /* Karaoke_FW */;
+			targetProxy = 50538F8F2938BD0B002C66AC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		50538F952938BD0B002C66AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		50538F962938BD0B002C66AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		50538F982938BD0B002C66AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "gt.Karaoke-FW";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		50538F992938BD0B002C66AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "gt.Karaoke-FW";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		50538F9B2938BD0B002C66AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "gt.Karaoke-FWTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		50538F9C2938BD0B002C66AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "gt.Karaoke-FWTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		50538F7D2938BD0A002C66AC /* Build configuration list for PBXProject "Karaoke_FW" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50538F952938BD0B002C66AC /* Debug */,
+				50538F962938BD0B002C66AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		50538F972938BD0B002C66AC /* Build configuration list for PBXNativeTarget "Karaoke_FW" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50538F982938BD0B002C66AC /* Debug */,
+				50538F992938BD0B002C66AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		50538F9A2938BD0B002C66AC /* Build configuration list for PBXNativeTarget "Karaoke_FWTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50538F9B2938BD0B002C66AC /* Debug */,
+				50538F9C2938BD0B002C66AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 50538F7A2938BD0A002C66AC /* Project object */;
+}
