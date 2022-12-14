@@ -64,7 +64,8 @@ public extension RX {
 public extension RX {
     
     static let texte = Regex<Substring> {
-            ZeroOrMore { CharacterClass.caractereTexte }
+        .word
+        ZeroOrMore { CharacterClass.caractereTexte }
     }
 
     static let syllabe = Regex<Substring> {

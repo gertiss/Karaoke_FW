@@ -20,7 +20,7 @@ public struct Mesure: Equatable, CustomStringConvertible, AvecLecteur {
         "Mesure(temps: \(temps.map { $0.description }.joined(separator: ", ")))"
     }
     
-    public static let lecteur = Temps.lecteur.listeNonVideAvecSeparateur(", ")
+    public static let lecteur = Temps.lecteur.listeNonVideAvecSeparateur(",")
         .mapValeur { liste in
             Mesure(temps: liste)
         }
