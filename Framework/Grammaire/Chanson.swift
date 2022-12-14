@@ -115,7 +115,7 @@ extension Chanson: AvecLecteur {
                 .avecEncadrement(ouvrante: AccoladeOuvrante.lecteur, fermante: AccoladeFermante.lecteur)
                 .listeNonVide()
                 .mapErreur{ erreur in
-                    Erreur(message: "On attend une liste de parties non vides, chacune encadrée par des accolades. Pour cela :\n" + erreur.message, reste: erreur.reste)
+                    Erreur(message: "On attend une liste de parties non vides, chacune encadrée par des accolades.\nPour cela :\n" + erreur.message, reste: erreur.reste)
                 }
         )
         .mapValeur { (titre, auteurs, parties) in
