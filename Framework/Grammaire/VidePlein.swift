@@ -10,8 +10,7 @@ import Lecteur
 
 public struct VidePlein: AvecLecteurRegex, Hashable {
     
-    
-    public var syllabe2: String
+    public let syllabe2: String
     
     public typealias SortieRegex = (Substring, VidePlein)
     public static let regex = RX.videPlein

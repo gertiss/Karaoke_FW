@@ -9,6 +9,11 @@ import Foundation
 import Lecteur
 
 public struct VideVide: AvecLecteurRegex, Hashable {
+    
+    // Aucune variable stockée
+    
+    public init() { }
+    
     public static let regex = RX.videVide
     
     public static func valeur(_ sortie: (Substring, VideVide)) -> VideVide {

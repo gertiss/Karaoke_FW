@@ -8,9 +8,9 @@
 import Foundation
 
 let timeAfterTime = """
-    Time After Time
+Time After Time
 
-    Cyndi Lauper
+Cyndi Lauper
 
 {    =, =, =, =
     ly, ing in, - my, = | bed, I hear, - the, =

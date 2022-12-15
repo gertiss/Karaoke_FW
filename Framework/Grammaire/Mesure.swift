@@ -10,7 +10,7 @@ import Lecteur
 
 public struct Mesure: Equatable, CustomStringConvertible, AvecLecteur {
     
-    public var temps: [Temps]
+    public let temps: [Temps]
     
     public init(temps: [Temps] = []) {
         self.temps = temps

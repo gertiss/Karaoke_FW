@@ -48,6 +48,8 @@ public extension RX {
         ZeroOrMore { CharacterClass.caractereEspaceOuTabOuReturn }
     }
     
+    
+    /// Un return obligatoire éventuellement entouré d'espaces ou tabs ou returns 
     static let unOuPlusieursReturn = Regex<Substring> {
         espacesOuTabs
         CharacterClass.newlineSequence

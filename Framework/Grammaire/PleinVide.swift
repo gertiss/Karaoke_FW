@@ -12,8 +12,11 @@ import Lecteur
 
 public struct PleinVide: AvecLecteurRegex, Hashable {
     
+    public let syllabe1: String
     
-    public var syllabe1: String
+    public init(syllabe1: String) {
+        self.syllabe1 = syllabe1
+    }
     
     public typealias SortieRegex = (Substring, PleinVide)
     public static let regex = RX.pleinVide

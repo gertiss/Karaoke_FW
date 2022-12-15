@@ -146,13 +146,22 @@ final class Karaoke_FWTests: XCTestCase {
     
     func testSortieLigne() {
         let lecteur = Ligne.lecteur
-        print(lecteur.lire("ly, ing in, - my, = | bed, I hear, - the, =").valeur!.sortie)
-        print(lecteur.lire("clock, - tick, - and, = | think of, - you, =, =").valeur!.sortie)
-   }
+        let lecture = lecteur.lire("ly, ing in, - my, = | bed, I hear, - the, =")
+        XCTAssert(lecture.estSucces)
+        XCTAssertEqual(lecture.reste, "")
+        XCTAssertEqual(lecture.valeur!.mesures.count, 2)
+        print(lecture.valeur!.sortie)
+        
+        let lecture2 = lecteur.lire("clock, - tick, - and, = | think of, - you, =, =")
+        XCTAssertEqual(lecture2.reste, "")
+        XCTAssertEqual(lecture2.valeur!.mesures.count, 2)
+        print(lecture2.valeur!.sortie)
+  }
     
     func testSortieChanson() {
         let lecteur = Chanson.lecteur
-        print(lecteur.lire(timeAfterTime).valeur!.sortie)
+        let lecture = lecteur.lire(timeAfterTime)
+        print(lecture.texte)
     }
     
     func testMessagesErreur() {

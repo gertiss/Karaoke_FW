@@ -9,12 +9,18 @@ import Foundation
 import Lecteur
 
 public struct PleinPlein: AvecLecteurRegex, Hashable {
+    
+    public let syllabe1: String
+    public let syllabe2: String
+    
     public typealias SortieRegex = (Substring, String, String)
     public static let regex = RX.pleinPlein
     
+    public init(syllabe1: String, syllabe2: String) {
+        self.syllabe1 = syllabe1
+        self.syllabe2 = syllabe2
+    }
     
-    public var syllabe1: String
-    public var syllabe2: String
 }
 
 public extension PleinPlein {

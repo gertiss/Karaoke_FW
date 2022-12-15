@@ -9,8 +9,13 @@ import Foundation
 import Lecteur
 
 public struct Partie: Equatable, CustomStringConvertible, AvecLecteur {
-    public var nom: String
-    public var lignes: [Ligne]
+    public let nom: String
+    public let lignes: [Ligne]
+    
+    public init(nom: String = "", lignes: [Ligne]) {
+        self.nom = nom
+        self.lignes = lignes
+    }
     
     public var description: String {
         "Partie(nom: \(nom), lignes: \(lignes.map { $0.description }.joined (separator: "\n" )))"

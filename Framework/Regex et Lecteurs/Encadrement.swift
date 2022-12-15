@@ -65,7 +65,7 @@ struct AccoladeFermante: AvecLecteurRegex {
         Self()
     }
     
-    
+    /// Une accolade ouvrante obligatoire éventuellement entourée d'espacesOuTabsOuReturns
     static let regex: Regex<(Substring, Self)> = Regex {
         Capture {
             RX.espacesOuTabsOuReturns

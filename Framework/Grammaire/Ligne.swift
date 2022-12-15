@@ -10,6 +10,12 @@ import Lecteur
 
 public struct Ligne: Equatable, CustomStringConvertible, AvecLecteur {
     
+    public let mesures: [Mesure]
+    
+    public init(mesures: [Mesure]) {
+        self.mesures = mesures
+    }
+
     public static let lecteur = Mesure.lecteur.listeNonVideAvecSeparateur("|")
         .mapValeur { mesures in
             Ligne(mesures: mesures)
@@ -19,7 +25,6 @@ public struct Ligne: Equatable, CustomStringConvertible, AvecLecteur {
         mesures.map { $0.sourceRelisible }.joined(separator: "| ")
     }
     
-    public var mesures: [Mesure]
     
     public var description: String {
         "Ligne(mesures: \(mesures.map { $0.description }.joined(separator: "| ")))"
