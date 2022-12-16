@@ -26,11 +26,11 @@ struct EspacesOuTabs: AvecLecteurRegex {
     }
 }
 
-struct EspacesOuTabsOuReturn: AvecLecteurRegex {
+struct EspacesOuTabsOuReturns: AvecLecteurRegex {
     
     static let regex = RX.espacesOuTabsOuReturns
     
-    static func valeur(_ sortie: Substring) -> EspacesOuTabsOuReturn {
+    static func valeur(_ sortie: Substring) -> EspacesOuTabsOuReturns {
         Self()
     }
     
