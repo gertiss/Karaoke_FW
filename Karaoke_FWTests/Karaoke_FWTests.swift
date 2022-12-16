@@ -169,4 +169,14 @@ final class Karaoke_FWTests: XCTestCase {
         print(lecteur.lireTout("titre\nauteur\n{- a, - - c, - d}b").texte)
     }
     
+    func testTexte() {
+        let lecteur = Texte.lecteur
+        let lecture = lecteur.lire("\na\nb")
+        print(lecture.texte)
+        
+        let lecteurChanson = Chanson.lecteur
+        let lectureChanson = lecteurChanson.lire("\na\nb\n{z}")
+        print(lectureChanson.texte)
+    }
+    
 }

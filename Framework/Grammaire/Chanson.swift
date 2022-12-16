@@ -101,9 +101,9 @@ extension Chanson: AvecLecteur {
     /*
      Grammaire BNF Chanson
 
-     chanson = enTete parties
+     chanson = enTete parties espaceOuTabOuReturn*
 
-     enTete = titre marqueFinTitre auteurs marqueFinAuteurs
+     enTete = espaceOuTabOuReturn* titre marqueFinTitre auteurs marqueFinAuteurs
 
      titre = caractereWord caractereTexte*
      auteurs = caractereWord caractereTexte*
@@ -137,7 +137,8 @@ extension Chanson: AvecLecteur {
      */
     public static let lecteur =
     
-    Texte.lecteur.avecMarqueFin(UnOuPlusieursReturn.lecteur)
+    Texte.lecteur
+        .avecMarqueFin(UnOuPlusieursReturn.lecteur)
         .mapErreur{ erreur in
             Erreur(message: "On attend le titre de la chanson sur une ligne", reste: erreur.reste)
         }

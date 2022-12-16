@@ -66,7 +66,8 @@ public extension RX {
 public extension RX {
     
     static let texte = Regex<Substring> {
-        .word
+        espacesOuTabsOuReturns
+        CharacterClass.word
         ZeroOrMore { CharacterClass.caractereTexte }
     }
 

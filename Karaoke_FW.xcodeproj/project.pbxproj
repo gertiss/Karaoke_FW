@@ -39,6 +39,7 @@
 		507FAAD429436D4F008156C7 /* VidePlein publiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507FAAD329436D4F008156C7 /* VidePlein publiable.swift */; };
 		507FAAD629436D60008156C7 /* VideVide publiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507FAAD529436D60008156C7 /* VideVide publiable.swift */; };
 		507FAAD829436E2F008156C7 /* DemiSoupir.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507FAAD729436E2F008156C7 /* DemiSoupir.swift */; };
+		50907371294CA7BC00670C76 /* Neutres.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50907370294CA7BC00670C76 /* Neutres.swift */; };
 		50E7D3782948EE0300F6C8DB /* Texte.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E7D3772948EE0300F6C8DB /* Texte.swift */; };
 /* End PBXBuildFile section */
 
@@ -99,6 +100,7 @@
 		507FAAD329436D4F008156C7 /* VidePlein publiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VidePlein publiable.swift"; sourceTree = "<group>"; };
 		507FAAD529436D60008156C7 /* VideVide publiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VideVide publiable.swift"; sourceTree = "<group>"; };
 		507FAAD729436E2F008156C7 /* DemiSoupir.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemiSoupir.swift; sourceTree = "<group>"; };
+		50907370294CA7BC00670C76 /* Neutres.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Neutres.swift; sourceTree = "<group>"; };
 		50E7D3772948EE0300F6C8DB /* Texte.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Texte.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -185,6 +187,7 @@
 				50538FB32938BE53002C66AC /* RX.swift */,
 				5044420B293B7FBB000607BA /* Encadrement.swift */,
 				50E7D3772948EE0300F6C8DB /* Texte.swift */,
+				50907370294CA7BC00670C76 /* Neutres.swift */,
 			);
 			path = "Regex et Lecteurs";
 			sourceTree = "<group>";
@@ -357,6 +360,7 @@
 				50538FB42938BE53002C66AC /* RX.swift in Sources */,
 				507FAACC29436C78008156C7 /* Mesure publiable.swift in Sources */,
 				507FAAC429436B44008156C7 /* Publiable.swift in Sources */,
+				50907371294CA7BC00670C76 /* Neutres.swift in Sources */,
 				50444208293B37FE000607BA /* Curseur.swift in Sources */,
 				50538FA72938BD72002C66AC /* Partie.swift in Sources */,
 				503AB4822944E0B400D86975 /* NSAttributedString ext.swift in Sources */,
