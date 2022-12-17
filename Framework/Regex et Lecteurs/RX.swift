@@ -10,37 +10,35 @@ import RegexBuilder
 
 public enum RX { }
 
-// MARK: - Lexical
+// MARK: - Symboles
 
-public extension CharacterClass {
-    static var caractereTexte: CharacterClass {
-        .word.union(.espaceOuTab).union(.anyOf("<>,?;./:=+%^$*#@&'§!-"))
-    }
+public extension RX {
     
-    static var caractereEspaceOuTabOuReturn: CharacterClass {
-        .anyOf(" \t\n")
-    }
+    static let marqueSilenceCroche = "-"
+    static let marqueSilenceNoire = "="
+
 }
 
+// MARK: - Classes de caractères
+
 public extension CharacterClass {
-    static var caractereNom: CharacterClass {
-        .word
-    }
     
-    static var caractereSyllabe: CharacterClass {
+    static let caractereTexteEnLigne: CharacterClass =
+        .word.union(.caractereEspaceOuTab).union(.anyOf("-',;:.?!;()«»"))
+    
+    static let caractereSyllabe: CharacterClass =
         .word.union(.anyOf("'"))
-    }
 
-    
 }
 
-// MARK: - Caractères
-// Pas de capture. Type (Substring)
+// MARK: - Espacements "invisibles". Regex<Substring>
+// Uniquement pour la mise en page libre du texte source
+// ou pour éviter les ambiguïtés lexicales.
 
 public extension RX {
         
     static let espacesOuTabs = Regex<Substring> {
-        ZeroOrMore { CharacterClass.espaceOuTab }
+        ZeroOrMore { CharacterClass.caractereEspaceOuTab }
     }
     
 
@@ -49,26 +47,28 @@ public extension RX {
     }
     
     
-    /// Un return obligatoire éventuellement entouré d'espaces ou tabs ou returns 
-    static let unOuPlusieursReturn = Regex<Substring> {
-        espacesOuTabs
+    /// Un return obligatoire éventuellement suivi d'espaces ou tabs ou returns.
+    /// Peut servir pour indiquer la fin d'un texteEnLigne
+    static let unOuPlusieursReturns = Regex<Substring> {
         CharacterClass.newlineSequence
         ZeroOrMore { CharacterClass.caractereEspaceOuTabOuReturn }
     }
-
-    static let marqueSilenceCroche = "-"
-    static let marqueSilenceNoire = "="
     
 }
 
-// MARK: - Chaines
+// MARK: - Séquences "visibles". Regex<Substring>
 
 public extension RX {
     
-    static let texte = Regex<Substring> {
-        espacesOuTabsOuReturns
-        CharacterClass.word
-        ZeroOrMore { CharacterClass.caractereTexte }
+    /// Un texte "littéraire" pouvant tenir sur une ligne (titre, auteur, commentaire)
+    /// Autorisés : .word, espace, tab, tiret, apostrophe, ponctuations, parenthèses, guillemets français, guillemets anglais.
+    /// Doit commencer par un caractère ni espace ni tab.
+    /// Les parenthèses et guillemets français doivent être bien équilibrés.
+    /// Les guillemets anglais doivent être en nombre pair.
+    /// Exclus et pouvant indiquer la fin : return, accolades, crochets, autres symboles.
+    static let texteEnLigne = Regex<Substring> {
+        CharacterClass.caractereTexteEnLigne.subtracting(.caractereEspaceOuTab)
+        ZeroOrMore { CharacterClass.caractereTexteEnLigne }
     }
 
     static let syllabe = Regex<Substring> {
@@ -77,17 +77,19 @@ public extension RX {
     
 }
 
-// MARK: - Mots
+// MARK: - Différentes formes d'un Temps
 
 public extension RX {
     
+    /// Deux syllabes séparées par au moins un espace.
+    /// Consomme les espaces ou tabs qui suivent.
+    /// Ne compile pas directement en PleinPlein.
     static let pleinPlein = Regex<(Substring, String, String)> {
-        espacesOuTabs
         Capture {
             syllabe
         } transform: { String($0) }
         espacesOuTabs
-        " " // Les deux syllabes doivent être séparées par au moins un espace
+        " "
         espacesOuTabs
         Capture {
             syllabe
@@ -95,16 +97,20 @@ public extension RX {
         espacesOuTabs
     }
    
+    /// Une seule syllabe.
+    /// Consomme les espaces ou tabs qui suivent.
+    /// Compile directement en PleinVide
     static let pleinVide = Regex<(Substring, PleinVide)> {
-        espacesOuTabs
         Capture {
             syllabe
         } transform: { PleinVide(syllabe1: String($0)) }
         espacesOuTabs
     }
     
+    /// Une marque de demi-soupir suivie d'une syllabe.
+    /// Consomme les espaces ou tabs qui suivent.
+    /// Compile directement en VidePlein
     static let videPlein = Regex<(Substring, VidePlein)> {
-        espacesOuTabs
         marqueSilenceCroche
         espacesOuTabs
         Capture {
@@ -113,14 +119,16 @@ public extension RX {
         espacesOuTabs
     }
     
+    /// Une marque de soupir suivie d'une syllabe.
+    /// Consomme les espaces ou tabs qui suivent.
+    /// Compile directement en VideVide
     static let videVide = Regex<(Substring, VideVide)> {
         Capture {
-            espacesOuTabs
             marqueSilenceNoire
-            espacesOuTabs
         } transform: { s in
             VideVide()
         }
+        espacesOuTabs
     }
 
 }

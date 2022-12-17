@@ -91,7 +91,7 @@ struct AccoladeFermante: AvecLecteurRegex {
 struct UnOuPlusieursReturn: AvecLecteurRegex {
     
     typealias SortieRegex = Substring
-    static let regex = RX.unOuPlusieursReturn
+    static let regex = RX.unOuPlusieursReturns
     
     static func valeur(_ sortie: Substring) -> UnOuPlusieursReturn {
         Self()

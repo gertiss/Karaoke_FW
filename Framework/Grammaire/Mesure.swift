@@ -8,7 +8,7 @@
 import Foundation
 import Lecteur
 
-public struct Mesure: Equatable, CustomStringConvertible, AvecLecteur {
+public struct Mesure: AvecLecteur {
     
     public let temps: [Temps]
     

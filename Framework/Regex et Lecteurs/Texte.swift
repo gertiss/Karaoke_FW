@@ -12,7 +12,7 @@ public struct Texte: AvecLecteurRegex, AvecLecteurInstance  {
     
     
     public var string: String
-    public static let regex = RX.texte
+    public static let regex = RX.texteEnLigne
     
     public init(string: String) {
         self.string = string

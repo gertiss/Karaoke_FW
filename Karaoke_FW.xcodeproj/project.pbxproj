@@ -40,6 +40,7 @@
 		507FAAD629436D60008156C7 /* VideVide publiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507FAAD529436D60008156C7 /* VideVide publiable.swift */; };
 		507FAAD829436E2F008156C7 /* DemiSoupir.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507FAAD729436E2F008156C7 /* DemiSoupir.swift */; };
 		50907371294CA7BC00670C76 /* Neutres.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50907370294CA7BC00670C76 /* Neutres.swift */; };
+		50CBD8FB294DC67700699E95 /* SaisieChanson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CBD8FA294DC67700699E95 /* SaisieChanson.swift */; };
 		50E7D3782948EE0300F6C8DB /* Texte.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E7D3772948EE0300F6C8DB /* Texte.swift */; };
 /* End PBXBuildFile section */
 
@@ -101,6 +102,7 @@
 		507FAAD529436D60008156C7 /* VideVide publiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VideVide publiable.swift"; sourceTree = "<group>"; };
 		507FAAD729436E2F008156C7 /* DemiSoupir.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemiSoupir.swift; sourceTree = "<group>"; };
 		50907370294CA7BC00670C76 /* Neutres.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Neutres.swift; sourceTree = "<group>"; };
+		50CBD8FA294DC67700699E95 /* SaisieChanson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaisieChanson.swift; sourceTree = "<group>"; };
 		50E7D3772948EE0300F6C8DB /* Texte.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Texte.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -224,16 +226,25 @@
 			isa = PBXGroup;
 			children = (
 				50538FA52938BD72002C66AC /* Chanson.swift */,
+				50CBD8FA294DC67700699E95 /* SaisieChanson.swift */,
 				50538F9D2938BD70002C66AC /* Partie.swift */,
 				50538F9E2938BD70002C66AC /* Ligne.swift */,
 				50538F9F2938BD71002C66AC /* Mesure.swift */,
 				50538FA62938BD72002C66AC /* Temps.swift */,
+				50CBD8F9294DC4A200699E95 /* AvecRegex */,
+			);
+			path = Grammaire;
+			sourceTree = "<group>";
+		};
+		50CBD8F9294DC4A200699E95 /* AvecRegex */ = {
+			isa = PBXGroup;
+			children = (
 				50538FA12938BD71002C66AC /* PleinPlein.swift */,
 				50538FA02938BD71002C66AC /* PleinVide.swift */,
 				50538FA32938BD71002C66AC /* VidePlein.swift */,
 				50538FA42938BD71002C66AC /* VideVide.swift */,
 			);
-			path = Grammaire;
+			path = AvecRegex;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,7 +306,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1410;
-				LastUpgradeCheck = 1410;
+				LastUpgradeCheck = 1420;
 				TargetAttributes = {
 					50538F822938BD0A002C66AC = {
 						CreatedOnToolsVersion = 14.1;
@@ -374,6 +385,7 @@
 				50538FA82938BD72002C66AC /* Ligne.swift in Sources */,
 				507FAAD629436D60008156C7 /* VideVide publiable.swift in Sources */,
 				507FAAD429436D4F008156C7 /* VidePlein publiable.swift in Sources */,
+				50CBD8FB294DC67700699E95 /* SaisieChanson.swift in Sources */,
 				507FAAC629436BCA008156C7 /* Chanson publiable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -431,6 +443,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -494,6 +507,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -522,6 +536,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -549,6 +564,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -576,6 +592,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "gt.Karaoke-FWTests";
@@ -591,6 +608,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "gt.Karaoke-FWTests";

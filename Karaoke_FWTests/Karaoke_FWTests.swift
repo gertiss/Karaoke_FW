@@ -21,33 +21,39 @@ final class Karaoke_FWTests: XCTestCase {
     }
 
     func testRegex() {
-        let match = " a b ".wholeMatch(of: RX.pleinPlein)
+        // Attention : ici, pas d'espaces ou tabs au début
+        
+        let match = "a b ".wholeMatch(of: RX.pleinPlein)
         let output = match!.output
         print(output)
         
-        let match1 = " a ".wholeMatch(of: RX.pleinVide)
+        let match1 = "a ".wholeMatch(of: RX.pleinVide)
         let output1 = match1!.output
         print(output1)
 
-        let match2 = " - a ".wholeMatch(of: RX.videPlein)
+        let match2 = "- a ".wholeMatch(of: RX.videPlein)
         let output2 = match2!.output
         print(output2)
 
         
-        let match3 = " = ".wholeMatch(of: RX.videVide)
+        let match3 = "= ".wholeMatch(of: RX.videVide)
         let output3 = match3!.output
         print(output3)
     }
     
     func testLecteursPleinEtVide() {
+        // Attention : ici, pas d'espaces ou tabs au début
+        
         XCTAssertEqual(PleinPlein.lecteur.lire("ing in").valeur, PleinPlein(syllabe1: "ing", syllabe2: "in"))
         XCTAssertEqual(PleinVide.lecteur.lire("bed ").valeur, PleinVide(syllabe1: "bed"))
-        XCTAssertEqual(VidePlein.lecteur.lire(" - my ").valeur, VidePlein(syllabe2: "my"))
-        XCTAssertEqual(VideVide.lecteur.lire(" = ").valeur, VideVide())
+        XCTAssertEqual(VidePlein.lecteur.lire("- my ").valeur, VidePlein(syllabe2: "my"))
+        XCTAssertEqual(VideVide.lecteur.lire("= ").valeur, VideVide())
         
    }
     
     func testLecteurTemps() {
+        // Attention : ici, pas d'espaces ou tabs au début
+        
         print("\n> ing in")
         print(Temps.lecteur.lire("ing in").texte)
 

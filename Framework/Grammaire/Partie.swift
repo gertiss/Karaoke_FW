@@ -8,7 +8,7 @@
 import Foundation
 import Lecteur
 
-public struct Partie: Equatable, CustomStringConvertible, AvecLecteur {
+public struct Partie: AvecLecteur {
     public let nom: String
     public let lignes: [Ligne]
     
@@ -21,9 +21,10 @@ public struct Partie: Equatable, CustomStringConvertible, AvecLecteur {
         "Partie(nom: \(nom), lignes: \(lignes.map { $0.description }.joined (separator: "\n" )))"
     }
     
+    /// Provisoire : ne tient pas compte du nom, qui est vide
     public static let lecteur = Ligne.lecteur.listeNonVideAvecSeparateur("\n")
         .mapValeur { lignes in
-            Partie(nom: "Partie", lignes: lignes)
+            Partie(nom: "", lignes: lignes)
         }
     
     public var sourceRelisible: String {
