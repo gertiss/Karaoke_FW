@@ -24,7 +24,7 @@ public struct SaisieChanson {
     }
     
     public static let lecteur: Lecteur<SaisieChanson> =
-    Chanson.lecteur.avecEncadrement(ouvrante: "", fermante: "")
+    Chanson.lecteur.avecEncadrement(ouvrante: EspacesOuTabsOuReturns.lecteur, fermante: EspacesOuTabsOuReturns.lecteur)
         .mapValeur { chanson in
             SaisieChanson(chanson: chanson)
         }

@@ -39,9 +39,8 @@
 		507FAAD429436D4F008156C7 /* VidePlein publiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507FAAD329436D4F008156C7 /* VidePlein publiable.swift */; };
 		507FAAD629436D60008156C7 /* VideVide publiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507FAAD529436D60008156C7 /* VideVide publiable.swift */; };
 		507FAAD829436E2F008156C7 /* DemiSoupir.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507FAAD729436E2F008156C7 /* DemiSoupir.swift */; };
-		50907371294CA7BC00670C76 /* Neutres.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50907370294CA7BC00670C76 /* Neutres.swift */; };
 		50CBD8FB294DC67700699E95 /* SaisieChanson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CBD8FA294DC67700699E95 /* SaisieChanson.swift */; };
-		50E7D3782948EE0300F6C8DB /* Texte.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E7D3772948EE0300F6C8DB /* Texte.swift */; };
+		50E7D3782948EE0300F6C8DB /* TexteEnLigne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E7D3772948EE0300F6C8DB /* TexteEnLigne.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,9 +100,8 @@
 		507FAAD329436D4F008156C7 /* VidePlein publiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VidePlein publiable.swift"; sourceTree = "<group>"; };
 		507FAAD529436D60008156C7 /* VideVide publiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VideVide publiable.swift"; sourceTree = "<group>"; };
 		507FAAD729436E2F008156C7 /* DemiSoupir.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemiSoupir.swift; sourceTree = "<group>"; };
-		50907370294CA7BC00670C76 /* Neutres.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Neutres.swift; sourceTree = "<group>"; };
 		50CBD8FA294DC67700699E95 /* SaisieChanson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaisieChanson.swift; sourceTree = "<group>"; };
-		50E7D3772948EE0300F6C8DB /* Texte.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Texte.swift; sourceTree = "<group>"; };
+		50E7D3772948EE0300F6C8DB /* TexteEnLigne.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TexteEnLigne.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,8 +186,7 @@
 			children = (
 				50538FB32938BE53002C66AC /* RX.swift */,
 				5044420B293B7FBB000607BA /* Encadrement.swift */,
-				50E7D3772948EE0300F6C8DB /* Texte.swift */,
-				50907370294CA7BC00670C76 /* Neutres.swift */,
+				50E7D3772948EE0300F6C8DB /* TexteEnLigne.swift */,
 			);
 			path = "Regex et Lecteurs";
 			sourceTree = "<group>";
@@ -225,8 +222,8 @@
 		50BC2139294372AC002776EC /* Grammaire */ = {
 			isa = PBXGroup;
 			children = (
-				50538FA52938BD72002C66AC /* Chanson.swift */,
 				50CBD8FA294DC67700699E95 /* SaisieChanson.swift */,
+				50538FA52938BD72002C66AC /* Chanson.swift */,
 				50538F9D2938BD70002C66AC /* Partie.swift */,
 				50538F9E2938BD70002C66AC /* Ligne.swift */,
 				50538F9F2938BD71002C66AC /* Mesure.swift */,
@@ -365,13 +362,12 @@
 				507FAABF2943695B008156C7 /* Croche.swift in Sources */,
 				50538FAF2938BD72002C66AC /* Chanson.swift in Sources */,
 				50538FAD2938BD72002C66AC /* VidePlein.swift in Sources */,
-				50E7D3782948EE0300F6C8DB /* Texte.swift in Sources */,
+				50E7D3782948EE0300F6C8DB /* TexteEnLigne.swift in Sources */,
 				507FAAC829436BFC008156C7 /* Partie publiable.swift in Sources */,
 				50538FAE2938BD72002C66AC /* VideVide.swift in Sources */,
 				50538FB42938BE53002C66AC /* RX.swift in Sources */,
 				507FAACC29436C78008156C7 /* Mesure publiable.swift in Sources */,
 				507FAAC429436B44008156C7 /* Publiable.swift in Sources */,
-				50907371294CA7BC00670C76 /* Neutres.swift in Sources */,
 				50444208293B37FE000607BA /* Curseur.swift in Sources */,
 				50538FA72938BD72002C66AC /* Partie.swift in Sources */,
 				503AB4822944E0B400D86975 /* NSAttributedString ext.swift in Sources */,

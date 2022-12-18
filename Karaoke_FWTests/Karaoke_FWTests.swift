@@ -128,7 +128,7 @@ final class Karaoke_FWTests: XCTestCase {
     }
     
     func testLecteurTexte() {
-        let lecteur = Texte(string: "ab cd").lecteur
+        let lecteur = TexteEnLigne(string: "ab cd").lecteur
         let lecture = lecteur.lire("ab cd ef")
         XCTAssertEqual(lecture.texte.description, "􀆅 Texte(string: \"ab cd\") 􀄫\"ef\"")
     }
@@ -176,7 +176,7 @@ final class Karaoke_FWTests: XCTestCase {
     }
     
     func testTexte() {
-        let lecteur = Texte.lecteur
+        let lecteur = TexteEnLigne.lecteur
         let lecture = lecteur.lire("\na\nb")
         print(lecture.texte)
         

@@ -137,14 +137,14 @@ extension Chanson: AvecLecteur {
      */
     public static let lecteur =
     
-    Texte.lecteur
-        .avecMarqueFin(UnOuPlusieursReturn.lecteur)
+    TexteEnLigne.lecteur
+        .avecSuffixe(UnOuPlusieursReturn.lecteur)
         .mapErreur{ erreur in
             Erreur(message: "On attend le titre de la chanson sur une ligne", reste: erreur.reste)
         }
         .suiviDe2(
-            Texte.lecteur
-                .avecMarqueFin(UnOuPlusieursReturn.lecteur)
+            TexteEnLigne.lecteur
+                .avecSuffixe(UnOuPlusieursReturn.lecteur)
                 .mapErreur{ erreur in
                     Erreur(message: "On attend les auteurs de la chanson sur une ligne", reste: erreur.reste)
                 },
