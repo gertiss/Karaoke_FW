@@ -149,7 +149,7 @@ extension Chanson: AvecLecteur {
                     Erreur(message: "On attend les auteurs de la chanson sur une ligne", reste: erreur.reste)
                 },
             Partie.lecteur
-                .avecEncadrement(ouvrante: AccoladeOuvrante.lecteur, fermante: AccoladeFermante.lecteur)
+                .avecEncadrement(prefixe: AccoladeOuvrante.lecteur, suffixe: AccoladeFermante.lecteur)
                 .listeNonVide()
                 .mapErreur{ erreur in
                     Erreur(message: "On attend une liste de parties non vides, chacune encadrée par des accolades.\nPour cela :\n" + erreur.message, reste: erreur.reste)
