@@ -170,9 +170,9 @@ extension Chanson: AvecLecteur {
     }
     
     public var sourceRelisible: String {
-        let texteParties = parties.map { "{ \($0.sourceRelisible) }" }.joined(separator: "\n")
-        return texteParties
-    }
+            let texteParties = parties.map { "{ \($0.sourceRelisible) }" }.joined(separator: "\n")
+            return titre + "\n" + auteurs + "\n\n" + texteParties
+        }
 }
     
 
