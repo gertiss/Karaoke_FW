@@ -9,28 +9,6 @@ import Foundation
 import Lecteur
 import RegexBuilder
 
-public enum Encadrement: UnEncadrement {
-    case parentheses
-    case crochets
-    case accolades
-    
-    public var ouvrante: String {
-        switch self {
-        case .parentheses: return "("
-        case .crochets: return "["
-        case .accolades: return "{"
-        }
-    }
-    
-    public var fermante: String {
-        switch self {
-        case .parentheses: return ")"
-        case .crochets: return "]"
-        case .accolades: return "}"
-        }
-    }
-    
-}
 
 struct AccoladeOuvrante: AvecLecteurRegex {
     static func valeur(_ sortie: (Substring, Self)) -> AccoladeOuvrante {

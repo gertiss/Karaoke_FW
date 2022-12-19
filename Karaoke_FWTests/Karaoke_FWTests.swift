@@ -185,4 +185,20 @@ final class Karaoke_FWTests: XCTestCase {
         print(lectureChanson.texte)
     }
     
+    func testSaisieChanson() {
+        let source = """
+
+t
+
+a
+
+{c}
+{d}
+
+"""
+        let lecture = Chanson.lecteurDeSaisie.lireTout(source)
+        XCTAssert(lecture.estSucces)
+        print(lecture.texte)
+    }
+
 }
