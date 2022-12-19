@@ -40,20 +40,20 @@ public extension RX {
     static let espacesOuTabs = Regex<Substring> {
         ZeroOrMore { CharacterClass.caractereEspaceOuTab }
     }
-    
+
 
     static let espacesOuTabsOuReturns = Regex<Substring> {
         ZeroOrMore { CharacterClass.caractereEspaceOuTabOuReturn }
     }
-    
-    
+
+
     /// Un return obligatoire éventuellement suivi d'espaces ou tabs ou returns.
     /// Peut servir pour indiquer la fin d'un texteEnLigne
     static let unOuPlusieursReturns = Regex<Substring> {
         CharacterClass.newlineSequence
         ZeroOrMore { CharacterClass.caractereEspaceOuTabOuReturn }
     }
-    
+
 }
 
 // MARK: - Séquences "visibles". Regex<Substring>

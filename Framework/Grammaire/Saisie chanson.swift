@@ -10,6 +10,6 @@ import Lecteur
 
 public extension Chanson {
     
-    static let lecteurDeSaisie:  Lecteur<Chanson> = Chanson.lecteur.enIgnorantEncadrement(prefixe: EspacesOuTabsOuReturns, suffixe: EspacesOuTabsOuReturns)
+    static let lecteurDeSaisie:  Lecteur<Chanson> = Chanson.lecteur.enIgnorantEncadrement(prefixe: EspacesOuTabsOuReturns.lecteur, suffixe: EspacesOuTabsOuReturns.lecteur)
 
 }

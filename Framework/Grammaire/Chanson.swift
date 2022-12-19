@@ -98,43 +98,6 @@ public struct Chanson: Equatable, CustomStringConvertible {
 
 extension Chanson: AvecLecteur {
     
-    /*
-     Grammaire BNF Chanson
-
-     chanson = enTete parties espaceOuTabOuReturn*
-
-     enTete = espaceOuTabOuReturn* titre marqueFinTitre auteurs marqueFinAuteurs
-
-     titre = caractereWord caractereTexte*
-     auteurs = caractereWord caractereTexte*
-     marqueFinTitre = espaceOuTab* return espaceOuTabOuReturn*
-     marqueFinAuteurs = espaceOuTab* return espaceOuTabOuReturn*
-     caractereTexte = caractereWord | espaceOuTab | caractereTexteSymbole
-     caractereTexteSymbole = un caractère dans "<>,?;./:=+%^$*#@&'§!-"
-     caractereWord = CharacterClass.word
-
-     parties = partieEncadree+
-     partieEncadree = accoladeOuvrante partie accoladeFermante
-     accoladeOuvrante = espaceOuTabOuReturn* "{" espaceOuTabOuReturn*
-     accoladeFermante = espaceOuTabOuReturn* "}" espaceOuTabOuReturn*
-
-     partie = ligne (espaceOuTab* return espaceOuTab* ligne)*
-
-     ligne = mesure (espaceOuTab* barre espaceOuTab* mesure)*
-
-     mesure = temps (espaceOuTab* virgule espaceOuTab* temps)*
-
-     temps = pleinPlein | pleinVide | videPlein | videVide
-
-     pleinPlein = espaceOuTab* syllabe espaceOuTab+ syllabe espaceOuTab*
-     syllabe = caractereSyllabe+
-     caractereSyllabe = caractereWord | apostrophe
-     pleinVide = espaceOuTab* syllabe espaceOuTab*
-     videPlein = espaceOuTab* marqueSilenceCroche espaceOuTab* syllabe espaceOuTab*
-     marqueSilenceCroche = "-"
-     videVide = espaceOuTab* marqueSilenceNoire espaceOuTab*
-     marqueSilenceNoire = "="
-     */
     public static let lecteur =
     
     TexteEnLigne.lecteur
@@ -149,8 +112,8 @@ extension Chanson: AvecLecteur {
                     Erreur(message: "On attend les auteurs de la chanson sur une ligne", reste: erreur.reste)
                 },
             Partie.lecteur
-                .avecEncadrement(prefixe: AccoladeOuvrante.lecteur, suffixe: AccoladeFermante.lecteur)
-                .listeNonVide()
+                .avecEncadrement(prefixe: "{", suffixe: "}", espacement: EspacesOuTabsOuReturns())
+                .listeNonVide(espacement: EspacesOuTabsOuReturns())
                 .mapErreur{ erreur in
                     Erreur(message: "On attend une liste de parties non vides, chacune encadrée par des accolades.\nPour cela :\n" + erreur.message, reste: erreur.reste)
                 }

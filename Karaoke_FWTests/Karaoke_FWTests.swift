@@ -118,15 +118,7 @@ final class Karaoke_FWTests: XCTestCase {
         print(source.prefixMatch(of: regex)?.output ?? "nil")
         
     }
-        
-    func testAccolade() {
-        let lectureOuvrante = AccoladeOuvrante.lecteur.lire(" { \n ")
-        print(lectureOuvrante.texte)
-        
-        let lectureFermante = AccoladeFermante.lecteur.lire(" } \n ")
-        print(lectureFermante.texte)
-    }
-    
+            
     func testLecteurTexte() {
         let lecteur = TexteEnLigne(string: "ab cd").lecteur
         let lecture = lecteur.lire("ab cd ef")
@@ -192,11 +184,23 @@ t
 
 a
 
-{c}
-{d}
+{
+
+c
+
+
+}
+
+
+{
+
+d
+
+
+}
 
 """
-        let lecture = Chanson.lecteurDeSaisie.lireTout(source)
+        let lecture = Chanson.lecteurDeSaisie.lire(source)
         XCTAssert(lecture.estSucces)
         print(lecture.texte)
     }

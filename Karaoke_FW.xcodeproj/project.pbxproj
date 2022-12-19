@@ -10,7 +10,6 @@
 		500A5BDC29394D2900D7FDC7 /* TimeAfterTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500A5BDB29394D2900D7FDC7 /* TimeAfterTime.swift */; };
 		503AB4822944E0B400D86975 /* NSAttributedString ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503AB4812944E0B400D86975 /* NSAttributedString ext.swift */; };
 		50444208293B37FE000607BA /* Curseur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50444207293B37FE000607BA /* Curseur.swift */; };
-		5044420C293B7FBB000607BA /* Encadrement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5044420B293B7FBB000607BA /* Encadrement.swift */; };
 		50538F882938BD0A002C66AC /* Karaoke_FW.docc in Sources */ = {isa = PBXBuildFile; fileRef = 50538F872938BD0A002C66AC /* Karaoke_FW.docc */; };
 		50538F8E2938BD0B002C66AC /* Karaoke_FW.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50538F832938BD0A002C66AC /* Karaoke_FW.framework */; };
 		50538F932938BD0B002C66AC /* Karaoke_FWTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50538F922938BD0B002C66AC /* Karaoke_FWTests.swift */; };
@@ -71,7 +70,6 @@
 		500A5BDB29394D2900D7FDC7 /* TimeAfterTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeAfterTime.swift; sourceTree = "<group>"; };
 		503AB4812944E0B400D86975 /* NSAttributedString ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString ext.swift"; sourceTree = "<group>"; };
 		50444207293B37FE000607BA /* Curseur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Curseur.swift; sourceTree = "<group>"; };
-		5044420B293B7FBB000607BA /* Encadrement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encadrement.swift; sourceTree = "<group>"; };
 		50538F832938BD0A002C66AC /* Karaoke_FW.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Karaoke_FW.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		50538F862938BD0A002C66AC /* Karaoke_FW.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Karaoke_FW.h; sourceTree = "<group>"; };
 		50538F872938BD0A002C66AC /* Karaoke_FW.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Karaoke_FW.docc; sourceTree = "<group>"; };
@@ -185,7 +183,6 @@
 			isa = PBXGroup;
 			children = (
 				50538FB32938BE53002C66AC /* RX.swift */,
-				5044420B293B7FBB000607BA /* Encadrement.swift */,
 				50E7D3772948EE0300F6C8DB /* TexteEnLigne.swift */,
 			);
 			path = "Regex et Lecteurs";
@@ -377,7 +374,6 @@
 				50538FB02938BD72002C66AC /* Temps.swift in Sources */,
 				507FAAD229436D3B008156C7 /* PleinVide publiable.swift in Sources */,
 				50538F882938BD0A002C66AC /* Karaoke_FW.docc in Sources */,
-				5044420C293B7FBB000607BA /* Encadrement.swift in Sources */,
 				50538FA82938BD72002C66AC /* Ligne.swift in Sources */,
 				507FAAD629436D60008156C7 /* VideVide publiable.swift in Sources */,
 				507FAAD429436D4F008156C7 /* VidePlein publiable.swift in Sources */,
